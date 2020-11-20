@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-0"></div>
+  <div class="col-md-8">
+    <br>
+    <a routerLink="/business" class="btn btn-primary">Certification List </a>
+    <a style="margin-left:10px" routerLink="/cert/add" class="btn btn-success">Add Certificate</a>
+    <br>
+  </div>
+</div>
+<h2> Certifications</h2>
+<table class="table table-striped">
+  <thead>
+      <tr>
+        <th>Name</th>
+        <th>Proficiency</th>
+        <th>Actions</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let employee of employees">
+          <td>{{employee.name}}</td>
+          <td>{{employee.proficiency}}</td>
+          <td>
+              <a [routerLink]="['/cert/update', employee.id]" class="btn btn-info">Update</a> &nbsp;
+              <button class="btn btn-danger" (click)="deleteEmployee(employee)"> Delete</button>
+          </td>
+      </tr>
+  </tbody>
+</table>

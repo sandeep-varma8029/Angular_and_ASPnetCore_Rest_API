@@ -1,0 +1,14 @@
+<h2>Update Certification</h2>
+<form (ngSubmit)="updateEmployee()" #employeeForm="ngForm">
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input [(ngModel)]="employee.name"  placeholder="Name" name="name" class="form-control" id="name">
+    </div>
+    <div class="form-group">
+        <label for="surname">Proficiceny:</label>
+        <input [(ngModel)]="employee.proficiency" placeholder="proficiency" name="surname" class="form-control" id="surname">
+    </div>
+    <div class="form-group text-center">
+        <button type="submit" class="btn btn-success">Update</button>
+    </div>
+</form>
